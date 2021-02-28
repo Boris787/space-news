@@ -6,6 +6,15 @@
       <br />
       <button>Read More</button>
     </header>
+    <section class="section"> 
+      <h1>Space-news = Site description</h1>
+      <span>Information about space in one click, and you know everything!</span>
+      <br />
+      <span>Space news are updating from moment to moment!</span>
+    </section>
+    <footer class="footer">
+      <span>Copyright &copy; 2021 by Space News. All rights reserved.</span>
+    </footer>
   </div>
 </template>
 
@@ -19,12 +28,15 @@ export default {
 <style lang="scss" scoped>
 header {
   height: 100vh;
+  //background-color: #999999;
 
   img {
     width: 500px;
     height: 450px;
-    float: left;
-    margin: 10px;
+    float: left;  
+    margin-top: 10px;
+    margin-left: 70px;
+    border-radius: 5px;
   }
 
   span {
@@ -33,20 +45,22 @@ header {
     right: 200px;
     width: 350px;
     border: 3px solid #333;
+    border-radius: 5px;
     padding: 25px;
   }
   
   button {
-    width: 100%;
+    width: 90%;
     background-color: #C2995E;
     border: none;
+    border-radius: 5px;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 100px 2px;
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
@@ -54,6 +68,29 @@ header {
     &:hover {
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
+  }
+}
+
+section {
+  height: 60vh;
+  //background-color: #999988;
+
+  h1 {
+    font-size: 30px;
+    padding: 25px;
+  }
+
+  span {
+    font-size: 35px;
+  }
+}
+
+footer {
+  height: 20vh;
+  //background-color: #946518;
+  
+  span {
+    font-size: 20px;
   }
 }
 </style>
