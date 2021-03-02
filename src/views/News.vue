@@ -1,10 +1,18 @@
 <template>
-
+    <div>
+        News Page
+    </div>
 </template>
 
 <script>
-export default {
+import { mapState } from 'vuex';
 
+export default {
+    // computed: {
+    //     ...mapState({
+    //         news: state => state.news
+    //     })
+    // }
 }
 </script>
 

@@ -12,9 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/news',
+    path: '/news', // set route
     name: 'News',
-    component: News
+    component: News // set to redirect to the according page / views
   }
 ]
 
