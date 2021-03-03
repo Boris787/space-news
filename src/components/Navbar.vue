@@ -1,8 +1,8 @@
 <template>
   <div class="navbar" id="navigation">
     <div class="navbar__elements">
-      <router-link class="navbar__elements__link" to="/">Home</router-link>
-      <router-link class="navbar__elements__link" to="/news">News</router-link>
+      <router-link class="navbar__elements__links" to="/">Home</router-link>
+      <router-link class="navbar__elements__links" to="/news">News</router-link>
     </div>
   </div>
 </template>
@@ -23,22 +23,24 @@ export default {
   background-color: #fff;
   display: flex;
   width: 100%;
+  position: relative;
 
   &__elements {
     display: flex;
+    position: absolute;
     list-style: none;
-    padding: 0;
+    padding: 15px;
     margin: 0 20px 0 0;
 
-    &__link {
-      font-size: 35px;
-      padding: 2px 10px;
+    &__links {
+      font-size: 45px;
+      padding: 10px 30px;
       cursor: pointer;
-      color: #000000;
-      text-decoration: none;
+      color: #fff;
+      
 
       &:hover {
-        color: #C2995E;
+        color: darkblue;
       }
     }
   }
