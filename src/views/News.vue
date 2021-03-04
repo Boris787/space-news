@@ -8,7 +8,17 @@
       </div>
     </header>
     <section class="section">
-      <div class="header__text"></div>
+      <div class="section__text">Results</div>
+      <div class="section__flex-container">
+        <div class="section__flex-box">
+          <img src="@/assets/landscape.png" class="section__flex-img">
+          <h1 class="section__flex-txt">This is Playstation 4/5 factory in space!</h1>
+        </div>
+        <div class="section__flex-box">
+          <img src="@/assets/landscape.png" class="section__flex-img">
+          <h1 class="section__flex-txt">This is Playstation 4/5 factory in space!</h1>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -86,8 +96,39 @@ export default {
   height: 100vh;
 
   &__text {
+    font-size: 70px;
+    font-weight: 700;
+    padding-top: 20px;
+  }
+
+  &__flex-container {
+    display: flex;
+    align-items: stretch;
+    margin-top: 120px;
+  }
+
+  &__flex-box {
+    background-color: darkblue;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
     font-size: 30px;
-    padding-top: 250px;
+    flex-grow: 5;
+    height: 600px;
+    width: 50%;
+  }
+
+  &__flex-img {
+    height: 400px;
+    width: 400px;
+    margin: 25px;
+    float: left;
+  }
+
+  &__flex-txt {
+    font-size: 30px;
+    padding-top: 460px;
   }
 }
 </style>
