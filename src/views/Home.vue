@@ -4,7 +4,7 @@
         <img src="@/assets/spacex.png" alt="spacex" class="header__image">
         <h1 class="header__center">Space News</h1>
         <h3 class="header__under">Best News From Space Every Second</h3>
-        <button class="header__btn" to="www.google.com">Read More</button>
+        <button class="header__btn" onclick="location.href='https://www.spacex.com/';">Read More</button>
     </header> 
     <section class="section">
       <h1 class="section__main-text">Description of News</h1>
