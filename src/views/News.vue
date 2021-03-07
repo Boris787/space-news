@@ -8,16 +8,9 @@
       </div>
     </header>
     <section class="section">
-      <div class="section__text">Results</div>
-      <div class="section__flex-container">
-        <div class="section__flex-box">
-          <img src="@/assets/landscape.png" class="section__flex-img">
-          <h1 class="section__flex-txt">This is Playstation 4/5 factory in space!</h1>
-        </div>
-        <div class="section__flex-box">
-          <img src="@/assets/landscape.png" class="section__flex-img">
-          <h1 class="section__flex-txt">This is Playstation 4/5 factory in space!</h1>
-        </div>
+      <div class="section__boxes">
+        <div class="section__content">1</div>
+        <div class="section__content">2</div>
       </div>
     </section>
   </div>
@@ -43,7 +36,6 @@ export default {
   &__img {
     width: 100%;
     height: 100%;
-    border-radius: 7px;
   }
 
   &__text {
@@ -52,7 +44,7 @@ export default {
     position: absolute;
     left: 420px;
     bottom: 600px;
-    color: blue;
+    color: gray;
   }
 
   &__search-box {
@@ -95,40 +87,30 @@ export default {
 .section {
   height: 100vh;
 
-  &__text {
-    font-size: 70px;
-    font-weight: 700;
-    padding-top: 20px;
-  }
-
-  &__flex-container {
+  &__boxes {
     display: flex;
-    align-items: stretch;
-    margin-top: 120px;
-  }
+    flex-wrap: wrap;
+    left: 30px;
+  } 
 
-  &__flex-box {
-    background-color: darkblue;
-    color: white;
-    margin: 10px;
+  &__content {
+    background-color: #f1f1f1;
+    width: 700px;
+    height: 600px;
+    margin-left: 170px;
+    margin-top: 200px;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
-    flex-grow: 5;
-    height: 600px;
-    width: 50%;
   }
-
-  &__flex-img {
-    height: 400px;
-    width: 400px;
-    margin: 25px;
-    float: left;
-  }
-
-  &__flex-txt {
-    font-size: 30px;
-    padding-top: 460px;
+  #scroll-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
   }
 }
+
 </style>
