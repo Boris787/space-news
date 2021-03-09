@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import Navbar from './components/Navbar.vue';
 import Home from '@/views/Home.vue';
 
@@ -13,6 +14,14 @@ export default {
   components: {
     Navbar,
     Home
+  },
+  mounted() {
+    this.$store.dispatch('spaceNews');
+  },
+  computed: {
+    ...mapState([
+      'news'
+    ])
   }
 }
 </script>

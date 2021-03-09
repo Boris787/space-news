@@ -9,7 +9,7 @@
     </header>
     <section class="section">
       <div class="section__boxes">
-        <div class="section__content">1</div>
+        <div v-for="(item, i) in news" key="i" class="section__content">1</div>
         <div class="section__content">2</div>
       </div>
     </section>
@@ -17,14 +17,22 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
-  // computed: {
-  //     ...mapState({
-  //         news: state => state.news
-  //     })
-  // }
+  computed: {
+    ...mapState({
+      news: state => state.news
+    })
+  },
+  methods: {
+    ...mapActions([
+      'getNews'
+    ])
+  },
+  async created() {
+    await this.getNews();
+  }
 }
 </script>
 
