@@ -24,6 +24,7 @@ export default {
   display: flex;
   width: 100%;
   position: relative;
+  z-index: 999;
 
   &__elements {
     display: flex;
@@ -33,7 +34,7 @@ export default {
     margin: 0 20px 0 0;
 
     &__links {
-      font-size: 45px;
+      font-size: 25px;
       padding: 10px 30px;
       cursor: pointer;
       color: #fff;

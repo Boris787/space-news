@@ -11,7 +11,7 @@ export default new Vuex.Store({
   actions: {
     async getNews ({ commit }) {
       try {
-        const res = await axios({ url: 'http://hubblesite.org/api/v3/news', method: 'GET' });
+        const res = await axios({ url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=6f211c19eb5146229fa1f42b2e36104e', method: 'GET', });
         commit('SET_NEWS', res);
       } catch(err) {
         throw err;
