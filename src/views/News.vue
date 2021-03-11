@@ -27,6 +27,7 @@
       <div class="section-news__boxes">
         <div v-for="(item, i) in news.data.articles" :key="i" class="section-news__boxes__content">
           <div class="section-news__boxes__content__box">
+            <img :src="`${item.urlToImage}`" alt="image" class="section-news__boxes__content__box__img">
             <h1 class="section-news__boxes__content__box__author">{{ item.author }}</h1>
             <br />
             <h3 class="section-news__boxes__content__box__title">{{ item.title }}</h3> 
@@ -115,7 +116,7 @@ export default {
       height: 350px;
       width: 350px;
         &__box {
-          margin-top: 220px;
+          //margin-top: 220px;
     
         &__author {
           font-size: 20px;
@@ -134,6 +135,12 @@ export default {
           font-size: 10px;
           font-weight: 700;
           float: left;      
+        }
+        &__img {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          bottom: 6px;
         }
       }
     }
