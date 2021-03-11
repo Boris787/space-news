@@ -26,7 +26,15 @@
     <section class="section-news">
       <div class="section-news__boxes">
         <div v-for="(item, i) in news.data.articles" :key="i" class="section-news__boxes__content">
-          {{ item.author }}
+          <div class="section-news__boxes__content__box">
+            <h1 class="section-news__boxes__content__box__author">{{ item.author }}</h1>
+            <br />
+            <h3 class="section-news__boxes__content__box__title">{{ item.title }}</h3> 
+            <!--<br />
+            <span class="section-news__boxes__content__box__description">{{ item.description }}</span> -->
+            <br />
+            <h5 class="section-news__boxes__content__box__date">{{ item.publishedAt }}</h5>
+          </div>
         </div>
       </div>
     </section>
@@ -102,9 +110,31 @@ export default {
       border: 1px solid rgb(212, 212, 212);
       border-radius: 5px;
       padding: 15px;
-      margin: 10px;
-      height: auto;
-      width: 300px;
+      margin: 15px;
+      height: 350px;
+      width: 350px;
+        &__box {
+          margin-top: 220px;
+    
+        &__author {
+          font-size: 20px;
+          font-weight: 500;
+          border-top: 1px solid #030F06;
+        }
+        &__title {
+          font-size: 15px;
+          font-weight: 700;
+        }
+        // &__description {
+        //   font-size: 15px;
+        //   font-weight: 600;
+        // }
+        &__date {
+          font-size: 10px;
+          font-weight: 700;
+          float: left;      
+        }
+      }
     }
   }
 }
