@@ -101,7 +101,8 @@ export default {
 
 // Section news
 .section-news {
-  padding: 15px 0;
+  padding: 15px;
+  padding-left: 125px;
   &__boxes {
     display: flex;
     flex-wrap: wrap;
