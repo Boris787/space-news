@@ -31,8 +31,8 @@
             <h1 class="section-news__boxes__content__box__author">{{ item.author }}</h1>
             <br />
             <h3 class="section-news__boxes__content__box__title">{{ item.title }}</h3> 
-            <!--<br />
-            <span class="section-news__boxes__content__box__description">{{ item.description }}</span> -->
+            <br />
+            <span class="section-news__boxes__content__box__description">{{ item.description }}</span>
             <br />
             <h5 class="section-news__boxes__content__box__date">{{ item.publishedAt }}</h5>
           </div>
@@ -108,39 +108,56 @@ export default {
     display: flex;
     flex-wrap: wrap;
     &__content {
-      background-color: #fff;
-      border: 1px solid rgb(212, 212, 212);
-      border-radius: 5px;
-      padding: 15px;
-      margin: 15px;
-      height: 350px;
-      width: 350px;
+      font-family: 'Lato', Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      min-width: 250px;
+      max-width: 310px;
+      width: 100%;
+      background-color: #ffffff;
+      color: #2B2B2B;
+      text-align: center;
+      font-size: 16px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 1);
         &__box {
           //margin-top: 220px;
-    
         &__author {
-          font-size: 20px;
-          font-weight: 500;
-          border-top: 1px solid #030F06;
+          font-weight: 400;
+          margin-top: 5px;
+          text-transform: uppercase;
+          color: #888;
+          letter-spacing: 1px;
+          font-size: 15px;
         }
         &__title {
           font-size: 15px;
           font-weight: 700;
+          bottom: 10px;
         }
-        // &__description {
-        //   font-size: 15px;
-        //   font-weight: 600;
-        // }
+        &__description {
+            font-family: 'Oswald';
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 25px;
+            margin: 3px 0px;
+        }
         &__date {
-          font-size: 10px;
-          font-weight: 700;
-          float: left;      
+          border-top: 1px solid rgba(0, 0, 0, 0.15);
+          padding: 0 20px;
+          font-size: 13px;
+          line-height: 50px;
+          text-align: left;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;     
         }
         &__img {
-          width: 100%;
-          height: 100%;
+          max-width: 100%;
+          vertical-align: top;
           position: relative;
-          bottom: 6px;
         }
       }
     }
