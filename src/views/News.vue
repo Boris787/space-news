@@ -111,8 +111,8 @@ export default {
       font-family: 'Lato', Arial, sans-serif;
       position: relative;
       overflow: hidden;
-      margin: 10px;
-      min-width: 250px;
+      margin: 12.5px;
+      min-width: 260px;
       max-width: 310px;
       width: 100%;
       background-color: #ffffff;
@@ -120,6 +120,7 @@ export default {
       text-align: center;
       font-size: 16px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+      border-radius: 7px;
         &__box {
           //margin-top: 220px;
         &__author {
