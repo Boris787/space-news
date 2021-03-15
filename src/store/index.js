@@ -12,7 +12,7 @@ export default new Vuex.Store({
     async getNews ({ commit }) {
       try {
         const res = await axios({ url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=6f211c19eb5146229fa1f42b2e36104e', method: 'GET', });
-        commit('SET_NEWS', res);
+        commit('SET_NEWS', res.data);
       } catch(err) {
         throw err;
       }

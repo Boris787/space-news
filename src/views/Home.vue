@@ -1,9 +1,10 @@
 <template>
   <div id="home">
     <header class="header">
-        <img src="@/assets/spacex.png" alt="spacex" class="header__image">
-        <h1 class="header__center">Space News</h1>
-        <h3 class="header__under">Best News From Space Every Second</h3>
+        <div class="header__content">
+          <h1 class="header__center">Space News</h1>
+          <h3 class="header__under">Best News From Space Every Second</h3>
+        </div>
         <button class="header__btn" onclick="location.href='https://www.spacex.com/';">Read More</button>
     </header> 
     <section class="section">
@@ -30,29 +31,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .header {
   height: 100vh;
-  
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url(../assets/spacex.png);
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+    h1 {
+      padding-bottom: 15px;
+    }
+  }
 
   &__image {
     height: 100%;
     width: 100%;
-  }
-
-  &__center {
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    font-size: 100px;
-    color: #fff;
-  }
-
-  &__under {
-    position: absolute;
-    top: 40%;
-    left: 32.5%;
-    font-size: 40px;
-    color: #fff;
   }
 
   &__btn {
@@ -79,7 +80,7 @@ export default {
   }
 }
 .section {
-  height: 100vh;
+  min-height: 100vh;
 
   &__main-text {
     font-size: 35px;
@@ -92,7 +93,7 @@ export default {
   }
 }
 .footer {
-  height: 15vh;
+  min-height: 15vh;
 
   &__copy-text {
     font-size: 20px;
