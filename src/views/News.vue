@@ -19,7 +19,7 @@
       <div class="header__wrap">
         <h1 class="header__text">Search Your Space</h1>
         <div class="header__search-holder">
-          <input type="search" class="header__search-box" placeholder="Search...">
+          <input type="search" class="header__search-box" placeholder="Search..." v-model="query" @input="searchNews">
         </div>
       </div>
     </header>
@@ -27,15 +27,20 @@
       <div class="section-news__boxes">
         <div v-for="(item, i) in news" :key="i" class="section-news__boxes__content">
           <div class="section-news__boxes__content__box">
-            <img :src="`${item.urlToImage}`" alt="image" class="section-news__boxes__content__box__img" width="auto" height="210px">
+            <img :src="`${item.urlToImage}`" alt="image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-if="item.urlToImage">
+            <img :src="`${item.urlToImage}`" alt="no image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-else>
             <div>
-              <h1 class="section-news__boxes__content__box__author">{{ item.author }}</h1>
+              <h1 class="section-news__boxes__content__box__author" v-if="item.author">{{ item.author }}</h1>
+              <h1 class="section-news__boxes__content__box__author" v-else>read no-more</h1>
               <br />
-              <h3 class="section-news__boxes__content__box__title">{{ item.title }}</h3> 
+              <h3 class="section-news__boxes__content__box__title" v-if="item.title">{{ item.title }}</h3> 
+              <h3 class="section-news__boxes__content__box__title" v-else>read some</h3>
               <br />
               <span class="section-news__boxes__content__box__description" v-if="item.description">{{ item.description.substring(0, 60) }}...</span>
+              <span class="section-news__boxes__content__box__description" v-else>Read More</span>
               <br />
-              <h5 class="section-news__boxes__content__box__date">{{ item.publishedAt }}</h5>
+              <h5 class="section-news__boxes__content__box__date" v-if="item.publishedAt">{{ item.publishedAt }}</h5>
+              <h5 class="section-news__boxes__content__box__data" v-else>0000-00-00000:00:00+00:00</h5>
             </div>
           </div>
         </div>
@@ -48,6 +53,11 @@
 import { mapState, mapActions } from 'vuex';
 
 export default {
+  data() {
+    return {
+      query: ''
+    }
+  },
   computed: {
     ...mapState({
       news: state => state.news.articles
@@ -71,19 +81,22 @@ export default {
   methods: {
     ...mapActions([
       'getNews'
-    ])
+    ]),
+    async searchNews() {
+      try {
+        if (this.query) {
+          this.getNews(this.query);
+        } else {
+          this.getNews('tesla');
+        }
+      } catch (err) {
+        throw err;
+      }
+    }
   },
   async created() {
-    await this.getNews();
+    await this.getNews('tesla');
   },
-  // mounted() {
-  //   window.setTimeout(() => {
-  //     this.news.forEach(el => {
-  //       console.log(el.description.substring(0, 50))
-  //       return el.description.substring(0, 4);
-  //     });
-  //   }, 1500);
-  // }
 }
 </script>
 

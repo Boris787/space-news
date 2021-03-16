@@ -17,9 +17,6 @@
       <h1 class="section__main-text">About our company</h1>
       <h5 class="section__second-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
     </section>
-    <footer class="footer">
-      <h1 class="footer__copy-text">Copyright &copy; by Space News. All Rights Reserved.</h1>
-    </footer>
   </div>
 </template>
 
@@ -90,14 +87,6 @@ export default {
   &__second-text {
     font-size: 20px;
     padding: 50px;
-  }
-}
-.footer {
-  min-height: 15vh;
-
-  &__copy-text {
-    font-size: 20px;
-    padding-top: 50px;
   }
 }
 </style>

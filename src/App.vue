@@ -1,19 +1,20 @@
 <template>
   <div id="app">
     <Navbar />
-    <router-view/>
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import {mapState} from 'vuex';
 import Navbar from './components/Navbar.vue';
-import Home from '@/views/Home.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   components: {
     Navbar,
-    Home
+    Footer
   },
   mounted() {
     // this.$store.dispatch('spaceNews'); // ??? Your function for dispatching news is getNews and should be called on NEWS page
