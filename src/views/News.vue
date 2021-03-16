@@ -40,7 +40,7 @@
               <span class="section-news__boxes__content__box__description" v-else>Read More</span>
               <br />
               <h5 class="section-news__boxes__content__box__date" v-if="item.publishedAt">{{ item.publishedAt }}</h5>
-              <h5 class="section-news__boxes__content__box__data" v-else>0000-00-00000:00:00+00:00</h5>
+              <h5 class="section-news__boxes__content__box__date" v-else>0000-00-00000:00:00+00:00</h5>
             </div>
           </div>
         </div>
@@ -167,6 +167,17 @@ export default {
           }
           div {
             padding: 20px;
+          }
+          &__author {
+            margin: 5px;
+          }
+          &__description {
+            margin: 5px; 
+          }
+          &__date {
+            font-size: 12px;
+            margin-top: 50px;
+            float: left;
           }
           //margin-top: 220px;
         // &__author {
