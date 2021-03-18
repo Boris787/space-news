@@ -6,6 +6,9 @@
           <h3 class="header__under">Best News From Space Every Second</h3>
         </div>
         <button class="header__btn" onclick="location.href='https://www.spacex.com/';">Read More</button>
+        <video autoplay loop muted class="header__video">
+          <source src="@/assets/space.mp4" alt="video/mp4">
+        </video>
     </header> 
     <section class="section">
       <h1 class="section__main-text">Description of News</h1>
@@ -16,6 +19,10 @@
         <br />
       <h1 class="section__main-text">About our company</h1>
       <h5 class="section__second-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+    </section>
+    <section class="section-image">
+      <h1>Rocket of spaceX</h1>
+      <button class="section-image__btn">Spacex</button>
     </section>
   </div>
 </template>
@@ -32,9 +39,9 @@ export default {
 .header {
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url(../assets/spacex.png);
-  background-position: center;
-  background-size: cover;
+  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url(../assets/spacex.png);
+  // background-position: center;
+  // background-size: cover;
 
   &__content {
     position: absolute;
@@ -47,14 +54,8 @@ export default {
       padding-bottom: 15px;
     }
   }
-
-  &__image {
-    height: 100%;
-    width: 100%;
-  }
-
   &__btn {
-    background: linear-gradient(to right, black 25%, darkblue 75%);
+    background: linear-gradient(to right, lightblue 10%, darkblue 40%, black 50%);
     border: none;
     color: #fff;
     padding: 15px 32px;
@@ -75,18 +76,62 @@ export default {
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
   }
+  &__video {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 .section {
   min-height: 100vh;
 
   &__main-text {
     font-size: 35px;
-    padding-top: 25px;
+    padding-top: 100px;
   }
 
   &__second-text {
     font-size: 20px;
     padding: 50px;
   }
+}
+.section-image {
+  min-height: 50vh;
+  margin: 15px 0;
+  position: relative;
+
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .20)), url(../assets/rocket.png);
+  background-position: center;
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__btn {
+      background: #062103;
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 4px 3px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      width: 20%;
+      position: absolute;
+      top: 80%;
+      left: 40%;
+      border-radius: 50px;
+
+      &:hover {
+        box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.30),0 20px 54px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
 }
 </style>

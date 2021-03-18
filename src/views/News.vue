@@ -1,19 +1,4 @@
 <template>
-  <!-- <div>
-    <header class="header"> -->
-      <!-- <img src="@/assets/blue-space.png" class="header__img"> --> <!-- Background image, not <img> -->
-      <!-- <h1 class="header__text">Search Your Space</h1>
-      <div class="header__search-holder">
-        <input type="search" class="header__search-box" placeholder="Search...">
-      </div>
-    </header>
-    <section class="section">
-      <div class="section__boxes">
-        <div v-for="(item, i) in news" :key="i" class="section__content">1</div>
-        <div class="section__content">2</div>
-      </div>
-    </section>
-  </div> -->
   <div>
     <header class="header">
       <div class="header__wrap">
@@ -27,8 +12,8 @@
       <div class="section-news__boxes">
         <div v-for="(item, i) in news" :key="i" class="section-news__boxes__content">
           <div class="section-news__boxes__content__box">
-            <img :src="`${item.urlToImage}`" alt="image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-if="item.urlToImage">
-            <img :src="`${item.urlToImage}`" alt="no image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-else>
+            <img :src="`${item.urlToImage}`" alt="Article Image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-if="item.urlToImage">
+            <img :src="`${item.urlToImage}`" alt="Article Image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-else>
             <div>
               <h1 class="section-news__boxes__content__box__author" v-if="item.author">{{ item.author }}</h1>
               <h1 class="section-news__boxes__content__box__author" v-else>read no-more</h1>
@@ -168,50 +153,17 @@ export default {
           div {
             padding: 20px;
           }
-          &__author {
-            margin: 5px;
-          }
-          &__description {
-            margin: 5px; 
-          }
-          &__date {
-            font-size: 12px;
-            margin-top: 50px;
-            float: left;
-          }
-          //margin-top: 220px;
-        // &__author {
-        //   font-weight: 400;
-        //   margin-top: 5px;
-        //   text-transform: uppercase;
-        //   color: #888;
-        //   letter-spacing: 1px;
-        //   font-size: 15px;
-        // }
-        // &__title {
-        //   font-size: 15px;
-        //   font-weight: 700;
-        //   bottom: 10px;
-        // }
-        // &__description {
-        //     font-family: 'Oswald';
-        //     text-transform: uppercase;
-        //     font-size: 20px;
-        //     font-weight: 400;
-        //     margin: 3px 0px;
-        // }
-        // &__date {
-        //   border-top: 1px solid rgba(0, 0, 0, 0.15);
-        //   padding: 0 20px;
-        //   font-size: 13px;
-        //   text-align: left;
-        //   width: 100%;     
-        // }
-        // &__img {
-        //   max-width: 100%;
-        //   vertical-align: top;
-        //   position: relative;
-        // }
+            &__author {
+              margin: 5px;
+            }
+              &__description {
+                margin: 5px; 
+              }
+                &__date {
+                  font-size: 12px;
+                  margin-top: 50px;
+                  float: left;
+                }
       }
     }
   }
