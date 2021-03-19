@@ -11,17 +11,26 @@
         </video>
     </header> 
     <section class="section">
-      <h1 class="section__main-text">Description of News</h1>
-      <h3 class="section__second-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+      <div class="section__left">
+        <h1 class="section__left__mtext">Description of News</h1>
+        <h3 class="section__left__stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+        <button class="section__left__button">Spacex</button>
+      </div>
         <br />
-      <h1 class="section__main-text">Description of Site</h1>
-      <h5 class="section__second-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+      <div class="section__right">
+        <h1 class="section__right__main">Description of Site</h1>
+        <h5 class="section__right__second">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+        <button class="section__right__button">Spacex</button>
+      </div>
         <br />
-      <h1 class="section__main-text">About our company</h1>
-      <h5 class="section__second-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+      <div class="section__left">
+        <h1 class="section__left__mtext">About our company</h1>
+        <h3 class="section__left__stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+        <button class="section__left__buttons">Spacex</button>
+      </div>
     </section>
     <section class="section-image">
-      <h1>Rocket of spaceX</h1>
+      <h1>Rocket of spaceX</h1> 
       <button class="section-image__button">Spacex</button>
     </section>
   </div>
@@ -35,13 +44,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 .header {
   height: 100vh;
   position: relative;
-  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url(../assets/spacex.png);
-  // background-position: center;
-  // background-size: cover;
 
   &__content {
     position: absolute;
@@ -84,20 +92,107 @@ export default {
 }
 .section {
   min-height: 100vh;
+  padding-top: 170px;
 
-  &__main-text {
-    font-size: 35px;
-    padding-top: 100px;
+  &__left {
+    padding: 50px;
+
+    &__mtext {
+      font-family: Anton;
+      font-size: 40px;
+      padding-right: 70%;
+    }
+    &__stext {
+      font-family: Syne Mono;
+      padding-right: 70%; 
+      padding-top: 2.5%;
+    }
+    &__button {
+      background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      width: 20%;
+      position: absolute;
+      top: 185%;
+      left: 7%;
+      border-radius: 50px;
+
+      &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
+    &__buttons {
+      background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      width: 20%;
+      position: absolute;
+      top: 318%;
+      left: 7%;
+      border-radius: 50px;
+
+      &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
   }
+  &__right {
+    padding: 50px;
+    
+    &__main {
+      font-family: Anton;
+      font-size: 40px;
+      padding-left: 70%;
+    }
+    &__second {
+      font-family: Syne Mono;
+      font-size: 20px;
+      padding-left: 70%;
+      padding-top: 2.5%;
+    }
+    &__button {
+      background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
+      border: none;
+      color: #fff;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      width: 20%;
+      position: absolute;
+      top: 255%;
+      left: 72.5%;
+      border-radius: 50px;
 
-  &__second-text {
-    font-size: 20px;
-    padding: 40px;
+      &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+    }
   }
 }
 .section-image {
   min-height: 50vh;
-  margin: 15px 0;
+  margin: 50px 0;
   position: relative;
 
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .0), rgba(0, 0, 0, .20)), url(../assets/rocket.png);

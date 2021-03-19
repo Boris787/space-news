@@ -10,7 +10,7 @@
 
   &__copy-text {
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 25px;
   }
 }
 </style>
