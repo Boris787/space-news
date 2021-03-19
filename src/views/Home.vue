@@ -14,19 +14,19 @@
       <div class="section__left">
         <h1 class="section__left__mtext">Description of News</h1>
         <h3 class="section__left__stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
-        <button class="section__left__button">Spacex</button>
+        <button class="section__left__button">News</button>
       </div>
         <br />
       <div class="section__right">
         <h1 class="section__right__main">Description of Site</h1>
         <h5 class="section__right__second">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
-        <button class="section__right__button">Spacex</button>
+        <button class="section__right__button">Web</button>
       </div>
         <br />
       <div class="section__left">
         <h1 class="section__left__mtext">About our company</h1>
         <h3 class="section__left__stext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
-        <button class="section__left__buttons">Spacex</button>
+        <button class="section__left__buttons">About Us</button>
       </div>
     </section>
     <section class="section-image">
@@ -92,7 +92,7 @@ export default {
 }
 .section {
   min-height: 100vh;
-  padding-top: 170px;
+  padding-top: 50px;
 
   &__left {
     padding: 50px;
@@ -110,7 +110,7 @@ export default {
     &__button {
       background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
       border: none;
-      color: #fff;
+      color: #111;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -121,7 +121,7 @@ export default {
       transition-duration: 0.4s;
       width: 20%;
       position: absolute;
-      top: 185%;
+      top: 165%;
       left: 7%;
       border-radius: 50px;
 
@@ -132,7 +132,7 @@ export default {
     &__buttons {
       background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
       border: none;
-      color: #fff;
+      color: #111;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -143,7 +143,7 @@ export default {
       transition-duration: 0.4s;
       width: 20%;
       position: absolute;
-      top: 318%;
+      top: 300%;
       left: 7%;
       border-radius: 50px;
 
@@ -169,7 +169,7 @@ export default {
     &__button {
       background: linear-gradient(to right, rgba(25, 65, 178, .5), rgba(40, 80, 255, .10));
       border: none;
-      color: #fff;
+      color: #111;
       padding: 15px 32px;
       text-align: center;
       text-decoration: none;
@@ -180,7 +180,7 @@ export default {
       transition-duration: 0.4s;
       width: 20%;
       position: absolute;
-      top: 255%;
+      top: 237%;
       left: 72.5%;
       border-radius: 50px;
 
