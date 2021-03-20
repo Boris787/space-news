@@ -1,6 +1,9 @@
 <template>
   <div>
     <header class="header">
+        <video autoplay loop muted class="header__video">
+          <source src="@/assets/info.mp4" alt="video/mp4">
+        </video>
       <div class="header__wrap">
         <h1 class="header__text">Search Your Space</h1>
         <div class="header__search-holder">
@@ -88,9 +91,6 @@ export default {
 <style lang="scss" scoped>
 .header {
   min-height: 85vh;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4)), url(../assets/blue-space.png);
-  background-position: center;
-  background-size: cover;
   position: relative;
   // Content wrapper - center to the screen
   &__wrap {
@@ -105,9 +105,15 @@ export default {
     font-weight: 500;
     color: #fff;
   }
+  &__video {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   // Search  bar - minimize the code, use flat colors and styles
   &__search-holder  {
     padding-top: 20px;
+    position: absolute;
     input {
       outline: none;
       border: 1px solid lighten(#000, 40%);
@@ -115,7 +121,8 @@ export default {
       box-shadow: 0 0 50px rgba(#000, .3);
       padding: 10px;
       transition: all .2s ease-in-out;
-      width: 100%;
+      width: 180%;
+      
       &:hover {
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
