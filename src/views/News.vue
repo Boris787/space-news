@@ -19,16 +19,16 @@
             <img :src="`${item.urlToImage}`" alt="Article Image" class="section-news__boxes__content__box__img" width="auto" height="210px" v-else>
             <div>
               <h1 class="section-news__boxes__content__box__author" v-if="item.author">{{ item.author }}</h1>
-              <h1 class="section-news__boxes__content__box__author" v-else>read no-more</h1>
+              <h1 class="section-news__boxes__content__box__author" v-else>Unknown Author</h1>
               <br />
               <h3 class="section-news__boxes__content__box__title" v-if="item.title">{{ item.title }}</h3> 
-              <h3 class="section-news__boxes__content__box__title" v-else>read some</h3>
+              <h3 class="section-news__boxes__content__box__title" v-else>Unknown Title</h3>
               <br />
               <span class="section-news__boxes__content__box__description" v-if="item.description">{{ item.description.substring(0, 60) }}...</span>
-              <span class="section-news__boxes__content__box__description" v-else>Read More</span>
+              <span class="section-news__boxes__content__box__description" v-else>Unknown Description</span>
               <br />
               <h5 class="section-news__boxes__content__box__date" v-if="item.publishedAt">{{ item.publishedAt }}</h5>
-              <h5 class="section-news__boxes__content__box__date" v-else>0000-00-00000:00:00+00:00</h5>
+              <h5 class="section-news__boxes__content__box__date" v-else>Unknown Date</h5>
             </div>
           </div>
         </div>

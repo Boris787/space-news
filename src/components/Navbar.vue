@@ -3,6 +3,7 @@
     <div class="navbar__elements">
       <router-link class="navbar__elements__links" to="/">Home</router-link>
       <router-link class="navbar__elements__links" to="/news">News</router-link>
+      <router-link class="navbar__elements__links" to="/about">About Us</router-link>
     </div>
   </div>
 </template>
@@ -46,6 +47,19 @@ export default {
         shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
         color: #62B8F8;
       }
+      // &__about {
+      //   font-size: 25px;
+      //   padding: 10px 310%;
+      //   cursor: pointer;
+      //   color: #fff;
+      //   text-decoration: none;
+      //   -webkit-transition-duration: 0.4s;
+      //   transition-duration: 0.4s;
+
+      //   &:hover {
+      //     shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      //   }
+      // }
     }
   }
 }
