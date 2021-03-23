@@ -17,11 +17,11 @@
 
   h1 {
     background: linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-    font-size: 100px;
+    font-size: 80px;
     font-family: Anton;
     top: 57%;
-    left: 50.6%;
-    transform: translate(-50%, -50%);
+    left: 53.5%;
+    transform: translate(-57%, -50.6%);
     position: absolute;
   }
   &__video {
