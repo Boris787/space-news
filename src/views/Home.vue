@@ -6,7 +6,7 @@
           <h3 class="header__under">Best News From Space Every Second</h3>
         </div>
         <button class="header__btn">Read More</button>
-        <video autoplay loop muted class="header__video">
+        <video  autoplay loop muted class="header__video">
           <source src="@/assets/space.mp4" alt="video/mp4">
         </video>
     </header> 
@@ -46,6 +46,32 @@ export default {
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+@media all and (max-width: 500px) {
+  .header {
+    background: gray;
+    max-height: 40vh;
+    h1 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .section {
+    background: black;
+    max-height: 45vh;
+    .section__left__mtext {
+      font-size: 20px;
+    }
+    .section__left__stext {
+      font-size: 10px;
+    }
+    .section__left__button {
+      font-size: 10px;
+    }
+  }
+}
 
 .header {
   height: 100vh;
