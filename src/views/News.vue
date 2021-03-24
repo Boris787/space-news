@@ -89,6 +89,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media all and (max-width: 500px) {
+  .header {
+    background: gray;
+    min-height: 20vh;
+  }
+  .header__wrap {
+    padding-bottom: 270px;
+    h1 {
+      font-size: 25px;
+    }
+  }
+  .header__search-holder {
+    width: 55%;
+  }
+}
 .header {
   min-height: 85vh;
   position: relative;
