@@ -89,21 +89,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media all and (max-width: 500px) {
-  .header {
-    background: gray;
-    min-height: 20vh;
-  }
-  .header__wrap {
-    padding-bottom: 270px;
-    h1 {
-      font-size: 25px;
-    }
-  }
-  .header__search-holder {
-    width: 55%;
-  }
-}
 .header {
   min-height: 85vh;
   position: relative;
@@ -144,7 +129,50 @@ export default {
     }
   }
 }
-
+@media screen and (max-width: 1200px) {
+  .header__wrap {
+    width: 29%;
+    height: 8%;
+  }  
+}
+@media screen and (max-width: 1024px) {
+  .header__wrap {
+    width: 34%;
+    height: 25%;
+  }  
+}
+@media screen and (max-width: 769px) {
+  .header__wrap {
+    width: 44%;
+    height: 50%;
+  }  
+}
+@media screen and (max-width: 480px) {
+  .header__wrap {
+    left: 40%;
+    width: 15%;
+    height: 75%;
+    h1 {
+      font-size: 20px;
+      padding-left: 90%;
+    }
+    input {
+      padding-right: 70px;
+      width: 250%;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .header__wrap {
+    width: 25%;
+    h1 {
+      font-size: 10px;
+    }  
+    input {
+      width: 10%;
+    }
+  }
+}
 // Section news
 .section-news {
   padding: 15px;

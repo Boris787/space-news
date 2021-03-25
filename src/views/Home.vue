@@ -47,32 +47,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
-@media all and (max-width: 500px) {
-  .header {
-    background: gray;
-    max-height: 40vh;
-    h1 {
-      font-size: 20px;
-    }
-    h3 {
-      font-size: 20px;
-    }
-  }
-  .section {
-    background: black;
-    max-height: 45vh;
-    .section__left__mtext {
-      font-size: 20px;
-    }
-    .section__left__stext {
-      font-size: 10px;
-    }
-    .section__left__button {
-      font-size: 10px;
-    }
-  }
-}
-
 .header {
   height: 100vh;
   position: relative;
@@ -116,6 +90,70 @@ export default {
           width: 100%;
         }
       }
+@media screen and (max-width: 320px) {
+  .header {
+    width: 100%;
+    height: 100%;  
+    h1 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 10px;
+    }
+  }
+  .header__btn {
+    font-size: 10px;
+    padding: 10px 10px;
+    height: 15%;
+  }
+  .section {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100%;
+    height: 100%;  
+    h1 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+    .header__btn {
+    font-size: 10px;
+    padding: 10px 10px;
+    height: 15%;
+  }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 25px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }  
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+    height: 100%;
+  }  
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    width: 100%;
+    height: 100%;
+  }  
+}
 .section {
   min-height: 100vh;
   padding-top: 50px;

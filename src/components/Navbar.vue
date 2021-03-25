@@ -63,4 +63,41 @@ export default {
     }
   }
 }
+@media screen and (max-width: 320px) {
+  .navbar__elements__links {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar__elements__links {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .navbar__elements__links {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar__elements__links {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    left: 30px;
+  }
+  .navbar__elements__links {
+    font-size: 20px;
+    padding: 0 15px;
+  }
+}
 </style>
