@@ -164,9 +164,10 @@ export default {
 }
 @media screen and (max-width: 320px) {
   .header__wrap {
-    width: 25%;
+    width: 8%;
+    height: -20%;
     h1 {
-      font-size: 10px;
+      font-size: 15px;
     }  
     input {
       width: 10%;

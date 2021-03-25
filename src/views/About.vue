@@ -30,4 +30,49 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 1200px) {
+  .about {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 50px;
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .about {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 38px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .about {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .about {
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
 </style>
