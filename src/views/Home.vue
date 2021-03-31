@@ -106,9 +106,6 @@ export default {
     padding: 10px 10px;
     height: 15%;
   }
-  .section {
-    font-size: 15px;
-  }
 }
 @media screen and (max-width: 480px) {
   .header {
@@ -250,6 +247,64 @@ export default {
                 }
               }
             }   
+
+@media screen and (max-width: 320px) {
+  .section {
+    font-size: 15px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .section__right__second {
+    font-size: 15px;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    font-size: 15px;
+    h1 {
+      font-size: 15px;
+    }
+  }
+  .section__right__second {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .section {
+    font-size: 15px;
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .section__right__second {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    font-size: 15px;
+    h1 {
+      font-size: 25px;
+    }
+  }
+  .section__right__second {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section {
+    font-size: 20px;
+    h1 {
+      font-size: 25px;
+    }
+  }
+  .section__right__second {
+    font-size: 25px;
+  }
+}
+
 .section-image {
   min-height: 50vh;
   margin: 50px 0;
